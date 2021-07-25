@@ -1,0 +1,48 @@
+.btn {cursor:pointer;}
+#grid_home{
+    display: grid;
+    grid-template-columns:50px 1fr;
+    border-bottom:2px solid gray;
+    padding:5px;
+    text-align: center;
+}
+#grid{
+  display: grid;
+  grid-template-columns:322px 1fr;
+}
+#grid a {
+  font-size: 15pt;
+}
+#grid ul{
+  border-right: 2px solid gray;
+  width:280px;
+  margin:0;
+  padding:20px;
+}
+#grid li{
+  margin-bottom: 5px;
+}
+#grid p {
+  margin-left: 14px;
+  margin-right: 14px;
+}
+#grid img{
+  height: 450px
+}
+.img_sort {
+  text-align: center;
+}
+@media(max-width:800px){
+  #grid {
+    display: block;
+  }
+  #grid ul{
+    border-right:none;
+  }
+  #grid img{
+    height:200px
+  }
+  .img_sort{
+    text-align: left;
+  }
+}
