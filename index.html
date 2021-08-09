@@ -63,7 +63,32 @@
       display: none;
     }
   </style>
-
+  <script>
+    function change_theme(self) {
+      var target_body = document.querySelector("body").style;
+      if(document.querySelector("#theme_div").innerText == "day"){
+          document.querySelector("#theme_img").src = "sun.png";
+          document.querySelector("#theme_div").innerText = "night";
+          target_body.backgroundColor="black";
+          document.querySelector("h1").style.backgroundColor="black";
+          target_body.color="white";
+          change_list_color("powderblue");
+        }
+      else {
+        document.querySelector("#theme_img").src = "moon.png";
+        document.querySelector("#theme_div").innerText = "day";
+        target_body.backgroundColor="white";
+        document.querySelector("h1").style.backgroundColor="white";
+        target_body.color="black";
+        change_list_color("");
+      }
+    }
+    function change_list_color(color){
+      var target_a = document.getElementsByTagName("a");
+      for(var i = 0; i < target_a.length; i++)
+        target_a[i].style.color=color;
+    }
+  </script>
 </head>
 
 <body style="margin-top:65px;">
@@ -84,32 +109,8 @@
       </div>
     </div>
   <div style="position: fixed; top:90%; left: 90%">
-    <button class="btn" onclick="toggleImg()"><img id="theme_img" src="moon.png" width="50px"><div id="theme_div" value="day">day</div></button>
+    <button class="btn" onclick="change_theme()"><img id="theme_img" src="moon.png" width="50px"><div id="theme_div" value="day">day</div></button>
   </div>
-  <script>
-    function toggleImg() {
-      var target_body = document.querySelector("body").style;
-      var target_a = document.getElementsByTagName("a");
-      if(document.querySelector("#theme_div").innerText == "day"){
-          document.querySelector("#theme_img").src = "sun.png";
-          document.querySelector("#theme_div").innerText = "night";
-          target_body.backgroundColor="black";
-          document.querySelector("h1").style.backgroundColor="black";
-          target_body.color="white";
-          for(var i = 0; i < 5; i++)
-            target_a[i].style.color = "powderblue";
-        }
-      else {
-        document.querySelector("#theme_img").src = "moon.png";
-        document.querySelector("#theme_div").innerText = "day";
-        target_body.backgroundColor="white";
-        document.querySelector("h1").style.backgroundColor="white";
-        target_body.color="black";
-        for(var i = 0; i < 5; i++)
-          target_a[i].style.color="";
-      }
-    }
-  </script>
 </body>
 
 </html>
