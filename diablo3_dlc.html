@@ -4,14 +4,14 @@
   <title>디아블로 3 확장팩: 영혼을 거두는 자</title>
   <meta charset="utf-8" name="디아블로 3 확장팩: 영혼을 거두는 자" content="블리자드 엔터테인먼트의 액션 RPG 디아블로 III의 확장팩.">
   <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
 </head>
 
 <body>
   <div id="grid_home">
-    <a href="index.html"><img src="home.png" width="50px"></a>
-    <div>
-      <h1 style="margin:0;">디아블로 3_dlc</h1>
-  </div></div>
+    <a href="index.html"><img class="home_img" src="home.png" width="50px"></a>
+    <h1 style="margin:0;">디아블로 3_dlc</h1>
+  </div>
     <div id="grid">
       <ul>
         <li><a href="diablo1.html">디아블로 1</a></li>
@@ -19,14 +19,12 @@
         <li><a href="diablo3.html">디아블로 3</a></li>
         <li><a href="diablo4.html">디아블로 4</a></li>
       </ul>
-      <div>
+      <div >
         <font style="color:red;font-size:20pt;display:block;">블리자드 엔터테인먼트의 디아블로 III 확장팩.</font>
         <p class="img_sort"><img src="diablo3_dlc.png"></p>
         <p>2013년 독일 쾰른에서 개최된 게임스컴에서 첫 공개되었다. PC판은 자막/음성 모두 한글화가 완료되었다. 확장팩답게 여러가지 새로운 요소가 추가되었다.</p>
       </div>
     </div>
-  <div style="position: fixed; top:70%; left: 70%">
-    <img src="말티엘.png" width="400" alt="말티엘" class="btn">
-  </div>
+  <button class="btn" onclick="change_theme()"><img id="theme_img" src="moon.png" width="50px"><div id="theme_div" value="day">day</div></button>
 <body>
 </html>
