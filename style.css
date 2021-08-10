@@ -1,6 +1,7 @@
 body{
   margin-top: 55px;
 }
+.btn {cursor:pointer;}
 #grid_home{
     display: grid;
     grid-template-columns:50px 1fr;
@@ -43,6 +44,9 @@ body{
   display:block;
   text-align: center;
   border-bottom:2px solid gray;
+}
+#theme_div{
+  display: none;
 }
 .home_img{
 
