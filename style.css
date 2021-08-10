@@ -1,10 +1,18 @@
-.btn {cursor:pointer;}
+body{
+  margin-top: 55px;
+}
 #grid_home{
     display: grid;
     grid-template-columns:50px 1fr;
     border-bottom:2px solid gray;
-    padding:5px;
+    padding:0px;
     text-align: center;
+    margin:0;
+    position:fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 #grid{
   display: grid;
@@ -29,6 +37,16 @@
 #grid img{
   height: 450px
 }
+#grid font{
+  color:red;
+  font-size:20pt;
+  display:block;
+  text-align: center;
+  border-bottom:2px solid gray;
+}
+.home_img{
+
+}
 .img_sort {
   text-align: center;
 }
@@ -45,4 +63,9 @@
   .img_sort{
     text-align: left;
   }
+}
+button{
+  position: fixed;
+  top:90%;
+  left: 90%;
 }
